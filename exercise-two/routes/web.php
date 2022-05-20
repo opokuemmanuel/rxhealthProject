@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\OrderDetailsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,4 +21,4 @@ Route::get('/', function () {
 
 Route::get('/get/orders',[OrderController::class,'get_orders']);
 Route::get('/get/order/{id}',[OrderController::class,'get_order']);
-Route::get('/get/order/details/{id}',[OrderController::class,'get_order_with_details']);
+Route::get('/get/order/details/{id}',[OrderDetailsController::class,'get_order_with_details']);

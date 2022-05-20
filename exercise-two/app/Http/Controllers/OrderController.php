@@ -20,11 +20,7 @@ class OrderController extends Controller
         return response()->JSON(['status'=>200, 'data'=>$data]);
     }
 
-    public function get_order_with_details($id=null)
-    {
-        $data =  Order::with('order_details')->where('id',$id)->get();
-        return response()->JSON(['status'=>200, 'data'=>OrderResource::collection($data)]);
-    }
+
 
 }
 
